@@ -17,11 +17,9 @@ def download_youtube(yt: YouTube):
 
     print(f'Downloading "{title}"')
 
-    file = video.download(output_path=DIR)
+    file = video.download(output_path=DIR, skip_existing=True)
 
-    if os
-
-    os.rename(file, music_only)
+    os.rename(file, os.path.join(DIR, music_only))
 
 
 def download_link(link: str):
